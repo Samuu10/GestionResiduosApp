@@ -1,26 +1,64 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondo_verde_claro">
+    android:background="@color/fondo_verde_claro"
+    android:rotationX="360">
 
     <TextView
         android:id="@+id/tituloPrincipal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:text="GESTIÓN DE RESIDUOS"
-        android:textSize="25sp"
-        android:textStyle="bold"
         android:textColor="@android:color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp" />
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/subtituloPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tituloPrincipal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="¡Bienvenid@!"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textitoPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtituloPrincipal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/calendario_border"
+        android:padding="15dp"
+        android:text="Aquí comienza tu gran aventura en el mundo de los residuos y el reciclaje."
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_below="@id/textitoPrincipal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/imagen_reciclaje" />
 
     <LinearLayout
         android:id="@+id/bottom_buttons"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
+        android:orientation="horizontal"
         android:padding="15dp">
 
         <Button
@@ -29,9 +67,9 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
             android:layout_weight="10"
-            android:text="CALENDARIO"
             android:backgroundTint="@color/boton_azul_oscuro"
-            android:textColor="@color/blanco"/>
+            android:text="CALENDARIO"
+            android:textColor="@color/blanco" />
 
         <Button
             android:id="@+id/btn_mapa"
