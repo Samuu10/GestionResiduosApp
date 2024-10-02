@@ -26,6 +26,16 @@
         android:textStyle="bold"
         android:textColor="@android:color/black" />
 
+    <LinearLayout
+        android:id="@+id/grafica_vista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/subtituloEstadisticas"
+        android:layout_above="@id/boton_volver"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp" />
+
     <Button
         android:id="@+id/boton_volver"
         android:layout_width="100dp"
