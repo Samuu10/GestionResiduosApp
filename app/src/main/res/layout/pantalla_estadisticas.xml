@@ -33,8 +33,8 @@
         android:orientation="vertical"
         android:layout_below="@id/subtituloEstadisticas"
         android:layout_above="@id/boton_volver"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="30dp" />
+        android:layout_margin="15dp"
+        android:background="@drawable/calendario_border"/>
 
     <Button
         android:id="@+id/boton_volver"

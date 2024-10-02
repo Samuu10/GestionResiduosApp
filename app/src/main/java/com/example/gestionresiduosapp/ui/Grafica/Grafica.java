@@ -7,29 +7,35 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.util.Pair;
 import android.view.View;
-
 import androidx.annotation.Nullable;
-
 import java.util.ArrayList;
 
 public class Grafica extends View {
+    //Declaración de variables
     private ArrayList<Pair<String, Integer>> recyclingData = new ArrayList<>();
     private Paint barPaint;
     private Paint textPaint;
     private int[] barColors = {
-            Color.GRAY, Color.LTGRAY, Color.BLUE, Color.DKGRAY, Color.BLACK, Color.CYAN
+            Color.parseColor("#689F38"), // Verde oscuro (orgánico)
+            Color.parseColor("#00BCD4"), // Azul claro (papel y cartón)
+            Color.parseColor("#009688"), // Verde (vidrio)
+            Color.parseColor("#FFC107"), // Amarillo (envases y plásticos)
+            Color.parseColor("#795548")  // Marrón (otros)
     };
 
+    //Constructor
     public Grafica(Context context) {
         super(context);
         init();
     }
 
+    //Constructor
     public Grafica(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
+    //Método para inicializar las variables
     private void init() {
         barPaint = new Paint();
         textPaint = new Paint();
@@ -38,11 +44,13 @@ public class Grafica extends View {
         textPaint.setTextAlign(Paint.Align.CENTER);
     }
 
+    //Método para establecer los datos de reciclaje
     public void setRecyclingData(ArrayList<Pair<String, Integer>> data) {
         recyclingData = data;
         invalidate();
     }
 
+    //Método para dibujar la gráfica
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -56,14 +64,15 @@ public class Grafica extends View {
         float barSpacing = 20;
         float maxValue = getMaxValue();
 
-        // Ajustar altura del gráfico para dejar espacio para la leyenda y el margen superior
+        //Ajustar adicionales para la gráfica
         float graphHeight = getHeight() - 150;
         float yScale = graphHeight / maxValue;
+        float margin = 30;
 
-        // Dibujar cuadrícula
-        drawGrid(canvas, graphHeight, yScale);
+        //Dibujar cuadrícula
+        drawGrid(canvas, graphHeight, yScale, margin);
 
-        // Dibujar barras y etiquetas de semana
+        //Dibujar barras y etiquetas
         for (int i = 0; i < barCount; i++) {
             Pair<String, Integer> data = recyclingData.get(i);
             float barHeight = data.second * yScale;
@@ -74,38 +83,28 @@ public class Grafica extends View {
 
             canvas.drawText(data.first, x + barWidth / 2 - barSpacing / 2, graphHeight + 40, textPaint);
         }
-
-        // Dibujar leyenda
-        drawLegend(canvas, graphHeight);
     }
 
-    // Método para dibujar la cuadrícula
-    private void drawGrid(Canvas canvas, float graphHeight, float yScale) {
+    //Método para dibujar la cuadrícula
+    private void drawGrid(Canvas canvas, float graphHeight, float yScale, float margin) {
         Paint gridPaint = new Paint();
         gridPaint.setColor(Color.LTGRAY);
         gridPaint.setStrokeWidth(2);
 
-        // Líneas horizontales
+        //Líneas horizontales con margen
         for (int i = 0; i <= 10; i++) {
             float y = graphHeight - i * (graphHeight / 10);
-            canvas.drawLine(0, y, getWidth(), y, gridPaint);
+            canvas.drawLine(margin, y, getWidth() - margin, y, gridPaint);
 
-            // Etiquetas del eje Y
-            if (i % 2 == 0) { // Mostrar etiquetas cada 2 líneas
-                int value = (int) (i * (getMaxValue() / 10));
-                canvas.drawText(String.valueOf(value), 10, y - 10, textPaint);
+            //Etiquetas del eje Y con margen
+            if (i % 2 == 0) {
+                int value = (int) (i * (90 / 10));
+                canvas.drawText(String.valueOf(value), margin, y - 10, textPaint);
             }
         }
-
-        // Líneas verticales (opcional)
-        // Puedes añadir líneas verticales si lo deseas
     }
 
-    // Método para dibujar la leyenda si es necesario
-    private void drawLegend(Canvas canvas, float graphHeight) {
-        // No hacer nada
-    }
-
+    //Método para obtener el valor máximo de los datos
     private float getMaxValue() {
         float maxValue = 0;
         for (Pair<String, Integer> pair : recyclingData) {
@@ -113,6 +112,6 @@ public class Grafica extends View {
                 maxValue = pair.second;
             }
         }
-        return maxValue;
+        return maxValue + 10;
     }
 }
