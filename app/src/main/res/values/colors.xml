@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#9DDB9D</color>
+    <color name="blue">#FF0000FF</color>
+
+
+
+    <color name="fondo_verde_claro">#9CCA8E</color> <!-- Azul claro -->
+    <color name="boton_azul_oscuro">#00008B</color> <!-- Azul oscuro -->
+    <color name="blanco">#FFFFFF</color> <!-- Blanco para el texto -->
 </resources>

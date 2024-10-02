@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_verde_claro">
+
+    <TextView
+        android:id="@+id/tituloPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GESTIÓN DE RESIDUOS"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp" />
+
+    <LinearLayout
+        android:id="@+id/bottom_buttons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="15dp">
+
+        <Button
+            android:id="@+id/btn_calendario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_weight="10"
+            android:text="CALENDARIO"
+            android:backgroundTint="@color/boton_azul_oscuro"
+            android:textColor="@color/blanco"/>
+
+        <Button
+            android:id="@+id/btn_mapa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="11"
+            android:backgroundTint="@color/boton_azul_oscuro"
+            android:text="MAPA"
+            android:textColor="@color/blanco" />
+
+        <Button
+            android:id="@+id/btn_estadisticas"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="8"
+            android:backgroundTint="@color/boton_azul_oscuro"
+            android:text="ESTADÍSTICAS"
+            android:textColor="@color/blanco" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_verde_claro">
+
+    <TextView
+        android:id="@+id/tituloCalendario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALENDARIO"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:id="@+id/subtituloCalendario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tituloCalendario"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="15dp"
+        android:text="Tus Recordatorios de Reciclaje"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/calendario_border" />
+
+    <Button
+        android:id="@+id/botonAñadirRecordatorio"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@id/calendarView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Añadir Recordatorio"
+        android:backgroundTint="@color/boton_azul_oscuro"
+        android:textColor="@color/blanco" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutRecordatorios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/botonAñadirRecordatorio"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:layout_marginTop="15dp"
+        android:divider="?android:attr/dividerHorizontal"
+        android:dividerPadding="8dp"
+        android:layout_marginRight="15dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="10sp">
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/boton_volver"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:text="VOLVER"
+        android:backgroundTint="@color/boton_azul_oscuro"
+        android:textColor="@color/blanco" />
+
+</RelativeLayout>
