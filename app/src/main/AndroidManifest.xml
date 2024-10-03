@@ -21,6 +21,7 @@
         <activity android:name=".ui.PantallaCalendario" />
         <activity android:name=".ui.PantallaMapa" />
         <activity android:name=".ui.PantallaEstadisicas" />
+        <activity android:name=".ui.ListaReciclajeActivity" />
 
     </application>
 

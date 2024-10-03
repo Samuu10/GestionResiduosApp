@@ -21,6 +21,7 @@ public class PantallaPrincipal extends AppCompatActivity {
         btnMapa = findViewById(R.id.btn_mapa);
         btnEstadisticas = findViewById(R.id.btn_estadisticas);
 
+
         btnCalendario.setOnClickListener(v -> {
             startActivity(new Intent(PantallaPrincipal.this, PantallaCalendario.class));
         });
