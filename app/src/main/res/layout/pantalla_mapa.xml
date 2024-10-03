@@ -3,6 +3,20 @@
     android:layout_height="match_parent"
     android:background="@color/fondo_verde_claro">
 
+    <ImageView
+        android:id="@+id/imageViewMapa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mapa" />
+
+    <Button
+        android:id="@+id/btnVerLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Lista"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/boton_azul_oscuro"
+        android:layout_alignParentEnd="true"/>
 
     <TextView
         android:id="@+id/tituloMapa"
