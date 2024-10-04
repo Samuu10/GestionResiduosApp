@@ -45,3 +45,6 @@ El proyecto se divide en tres módulos principales:
 * **`activity_lista_reciclaje.xml`:** Define la interfaz de usuario para la lista de puntos de reciclaje, incluyendo el `RecyclerView`.
 * **`pantalla_principal.xml`:** Define la interfaz de usuario de la pantalla principal, incluyendo los botones del menú.
 * **`item_recycling_point.xml`:** Define la interfaz de usuario para cada elemento de la lista de puntos de reciclaje.
+
+Link al repositorio base: https://github.com/Samuu10/GestionResiduosApp.git
+Link al repositorio de la organización: https://github.com/GrupoProgramacionEventos/GestionResiduosApp.git
