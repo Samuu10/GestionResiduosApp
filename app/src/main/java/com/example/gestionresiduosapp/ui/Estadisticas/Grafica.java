@@ -1,4 +1,4 @@
-package com.example.gestionresiduosapp.ui.Grafica;
+package com.example.gestionresiduosapp.ui.Estadisticas;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -18,10 +18,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.PantallaCalendario" />
-        <activity android:name=".ui.PantallaMapa" />
-        <activity android:name=".ui.PantallaEstadisicas" />
-        <activity android:name=".ui.ListaReciclajeActivity" />
+        <activity android:name=".ui.Calendario.PantallaCalendario" />
+        <activity android:name=".ui.Mapa.PantallaMapa" />
+        <activity android:name=".ui.Estadisticas.PantallaEstadisicas" />
+        <activity android:name=".ui.Mapa.ListaReciclajeActivity" />
 
     </application>
 

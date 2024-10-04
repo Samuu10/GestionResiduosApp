@@ -1,4 +1,4 @@
-package com.example.gestionresiduosapp.ui;
+package com.example.gestionresiduosapp.ui.Mapa;
 
 import android.os.Bundle;
 import android.util.Log;

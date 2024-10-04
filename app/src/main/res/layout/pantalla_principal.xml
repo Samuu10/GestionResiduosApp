@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="200dp"
         android:text="GESTIÓN DE RESIDUOS"
         android:textColor="@android:color/black"
         android:textSize="30sp"
@@ -43,14 +43,6 @@
         android:textColor="@android:color/black"
         android:textSize="15sp" />
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:layout_below="@id/textitoPrincipal"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/imagen_reciclaje" />
 
     <LinearLayout
         android:id="@+id/bottom_buttons"

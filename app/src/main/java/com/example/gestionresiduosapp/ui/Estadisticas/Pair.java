@@ -1,4 +1,4 @@
-package com.example.gestionresiduosapp.ui.Grafica;
+package com.example.gestionresiduosapp.ui.Estadisticas;
 
 //Clase para representar un par de valores
 public class Pair<F, S> {

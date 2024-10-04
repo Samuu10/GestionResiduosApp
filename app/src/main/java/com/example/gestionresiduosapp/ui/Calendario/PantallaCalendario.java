@@ -1,4 +1,4 @@
-package com.example.gestionresiduosapp.ui;
+package com.example.gestionresiduosapp.ui.Calendario;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.gestionresiduosapp.R;
+import com.example.gestionresiduosapp.ui.PantallaPrincipal;
 
 import java.util.Calendar;
 import java.util.HashSet;
